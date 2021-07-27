@@ -1,0 +1,154 @@
+@import "./colors";
+
+:root {
+  font-size: 15px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  font-family: "Lexend Deca", sans-serif;
+  place-items: center;
+}
+.container {
+  display: flex;
+  overflow: hidden;
+
+  .card {
+    flex: 33.33%;
+    padding: 32px;
+    max-width: 300px;
+    min-width: 300px;
+    color: $light-gray;
+
+    &__title {
+      font-size: 2rem;
+      font-family: "Big Shoulders Display", cursive;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    &__body {
+      color: $Transparent-white;
+      font-size: 1.125rem;
+      line-height: 2em;
+
+      font-weight: 400;
+      margin-bottom: 6em;
+    }
+
+    &__cta {
+      border: none;
+      padding: 0.82em 2em;
+      background-color: $light-gray;
+      border-radius: 26px;
+      cursor: pointer;
+      transition: all ease 0.2s;
+      font-size: 1.125rem;
+      text-align: center;
+
+      &:hover {
+        background-color: transparent;
+        border: 2px solid $light-gray;
+        color: $light-gray !important;
+      }
+    }
+
+    &--typeone {
+      background-color: $light-orange;
+      border-radius: 8px 0 0 8px;
+
+      .card__cta {
+        color: $light-orange;
+      }
+
+      @media (max-width: 960px) {
+        border-radius: 8px 0 0 0;
+      }
+      @media (max-width: 620px) {
+        border-radius: 8px 8px 0 0;
+      }
+    }
+    &--typetwo {
+      background-color: $dark-cyan;
+      .card__cta {
+        color: $dark-cyan;
+      }
+      @media (max-width: 960px) {
+        border-radius: 0 8px 8px 0;
+      }
+      @media (max-width: 620px) {
+        border-radius: 0;
+      }
+    }
+    &--typethree {
+      background-color: $darker-cyan;
+      border-radius: 0 8px 8px 0;
+
+      .card__cta {
+        color: $darker-cyan;
+      }
+      @media (max-width: 960px) {
+        border-radius: 0 0 8px 8px;
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  body {
+    height: auto;
+  }
+  .container {
+    flex-direction: column;
+    margin: 50px 0;
+
+    .card {
+      flex: 100%;
+
+      &__body {
+        margin-bottom: 3em;
+      }
+    }
+  }
+}
+
+@media (max-width: 960px) {
+  body {
+    height: auto;
+  }
+  .container {
+    flex-wrap: wrap;
+    margin: 50px 0;
+    width: 620px;
+    margin: 50px 0;
+
+    .card {
+      &__body {
+        margin-bottom: 3em;
+      }
+    }
+  }
+}
+
+@media (max-width: 620px) {
+  .container {
+    flex-direction: column;
+    width: auto;
+
+    .card {
+      flex: 100%;
+
+      &__body {
+        margin-bottom: 3em;
+      }
+    }
+  }
+}
