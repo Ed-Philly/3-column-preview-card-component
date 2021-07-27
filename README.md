@@ -43,5 +43,5 @@ Users should be able to:
 
 ## Author
 
-- Github - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Github - [Ed-Philly](https://github.com/Ed-Philly/3-column-preview-card-component)
+- Frontend Mentor - [@Ed-philly](https://www.frontendmentor.io/profile/Ed-Philly)
